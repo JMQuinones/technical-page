@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position in CSS</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav id="navbar">
+        <header>CSS Positioning</header>
+        <ul>
+          <li><a href="#introduction" class="nav-link"> Introduction</a></li>
+          <li><a href="#static" class="nav-link"> Static</a></li>
+          <li><a href="#relative" class="nav-link"> Relative</a></li>
+          <li><a href="#fixed" class="nav-link">Fixed</a></li>
+          <li><a href="#absolute" class="nav-link"> Absolute</a></li>
+          <li><a href="#sticky" class="nav-link"> Sticky</a></li>
+          <li><a href="#references" class="nav-link"> References</a></li>
+        </ul>
+      </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <article>
+        <p>The position element indicates how an html element should be displayed on the page. There are five types of positioning:</p>
+          <ul>
+            <li>static</li>
+            <li>relative</li>
+            <li>fixed</li>
+            <li>absolute</li>
+            <li>sticky</li> 
+          </ul>
+          <p>Then each element can be postioned using the properties: top, bottom, left, right and z-index.
+        </article>
+      </section>
+      <section class="main-section" id="static">
+        <header>Static</header>
+        <article>
+          <p>This is the default positioning of elemnts. Elements are positioned in the normal flow of a document(i.e. Top to bottom).</p>
+          <p>This type of positioning is not affected by any of the properties mentioned before. The syntax is as follow:</p>
+          <div class="code-background">
+            <code>
+              element{</br>
+                <span class="indent-code">position: static</span></br>
+              }</br>
+            </code>
+          </div>
+        </article>
+      </section>
+      <section class="main-section" id="relative">
+        <header>Relative</header>
+        <article>
+          <p>The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left.</p>
+          <p>The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static. The syntax is as follow:</p>
+          <div class="code-background">
+            <code>
+              element{</br>
+                <span class="indent-code">position: relative</span></br>
+                <span class="indent-code">top: 5px</span></br>
+                <span class="indent-code">bottom: 5px</span></br>
+                <span class="indent-code">right: 5px</span></br>
+                <span class="indent-code">left: 5px</span></br>
+              }</br>
+            </code>
+          </div>
+        </article>
+      </section>
+
+<section class="main-section" id="fixed">
+        <header>Fixed</header>
+        <article>
+          <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a transform, perspective, or filter property set to something other than none (see the CSS Transforms Spec), or the will-change property is set to transform, in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with perspective and filter contributing to containing block formation.) Its final position is determined by the values of top, right, bottom, and left.</p>
+          <p>This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page. The syntax is as follow:</p>
+          <div class="code-background">
+            <code>
+              element{</br>
+                <span class="indent-code">position: fixed</span></br>
+                <span class="indent-code">top: 5px</span></br>
+                <span class="indent-code">bottom: 5px</span></br>
+                <span class="indent-code">right: 5px</span></br>
+                <span class="indent-code">left: 5px</span></br>
+              }</br>
+            </code>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="absolute">
+        <header>Absolute</header>
+        <article>
+          <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.</p>
+          <p>This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins. The syntax is as follow:</p>
+          <div class="code-background">
+            <code>
+              element{</br>
+                <span class="indent-code">position: absolute</span></br>
+                <span class="indent-code">top: 5px</span></br>
+                <span class="indent-code">bottom: 5px</span></br>
+                <span class="indent-code">right: 5px</span></br>
+                <span class="indent-code">left: 5px</span></br>
+              }</br>
+            </code>
+          </div>
+        </article>
+
+      </section>
+      <section class="main-section" id="sticky">
+        <header>Sticky</header>
+
+        <article>
+          <p>The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements.</p>
+          <p>This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor. The syntax is as follow:</p>
+          <div class="code-background">
+            <code>
+              element{</br>
+                <span class="indent-code">position: sticky</span></br>
+                <span class="indent-code">top: 5px</span></br>
+                <span class="indent-code">bottom: 5px</span></br>
+                <span class="indent-code">right: 5px</span></br>
+                <span class="indent-code">left: 5px</span></br>
+              }</br>
+            </code>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="references">
+        <header>References</header>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">https://developer.mozilla.org/en-US/docs/Web/CSS/position</a></li>
+          <li><a href="https://www.w3schools.com/css/css_positioning.asp">https://www.w3schools.com/css/css_positioning.asp</a></li>
+      </section>
+      
+    </main>
+  </body>
+</html>
